@@ -36,6 +36,87 @@ document.addEventListener('DOMContentLoaded',()=>{
     menuToggle.textContent='☰';
   }));
 
+  // text width 
+
+  const text = document.getElementById('scrollText');
+  const edutext = document.getElementById('educationText');
+  const sktext = document.getElementById('skillText');
+  const prtext = document.getElementById('projectText');
+  const conttext = document.getElementById('contactText');
+  // duplicate text for the ::after content
+  text.setAttribute('data-text', text.textContent);
+  edutext.setAttribute('data-text',edutext.textContent);
+  sktext.setAttribute('data-text',sktext.textContent);
+  prtext.setAttribute('data-text',prtext.textContent);
+  conttext.setAttribute('data-text',conttext.textContent);
+
+
+  let lastScroll = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const diff = scrollTop - lastScroll;
+
+    // use the scroll amount to alter the gradient width
+    const after = text.querySelector(':after') || text; // fallback
+    const eduafter = edutext.querySelector(':after') || edutext;
+    const skafter = sktext.querySelector(':after') || sktext;
+    const prafter = sktext.querySelector(':after') || prtext;
+    const contafter = sktext.querySelector(':after') || prtext;
+    
+    const current = parseFloat(text.style.getPropertyValue('--band') || 10);
+    const currentEdu = parseFloat(edutext.style.getPropertyValue('--band') || 10);
+    const currentsk = parseFloat(sktext.style.getPropertyValue('--band') || 10);
+  
+
+    let band = current + diff * 0.02;
+    band = Math.max(5, Math.min(20, band));
+
+    text.style.setProperty('--band', band);
+    edutext.style.setProperty('--band', band);
+    sktext.style.setProperty('--band',band);
+    prtext.style.setProperty('--band', band)
+    conttext.style.setProperty('--band', band);
+    // adjust gradient dynamically
+    text.style.setProperty, edutext.style.setProperty,sktext.style.setProperty,prtext.style.setProperty,conttext.style.setProperty(
+      '--grad',
+      `linear-gradient(to right, transparent 35%, #4ecdc4 calc(45% - ${band}px), #4ecdc4 calc(55% + ${band}px), transparent 65%)`
+    );
+
+    lastScroll = scrollTop;
+  });
+
+
+  // about section image effect 
+
+  const img_head = document.getElementById('img_head');
+  const img_section = document.getElementById('about');
+
+  img_section.addEventListener('mousemove', (e) => {
+    const rect = img_section.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2; // head pivot point
+
+    const dx = e.clientX - centerX;
+    const dy = e.clientY - centerY;
+
+    const percentX = dx / (rect.width/2);
+    const percentY = dy / (rect.height / 2);
+
+    const rotateY = -percentX * 40;
+    const rotateX = percentY * 25;
+
+    img_head.style.transform = `
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      `;
+  });
+
+  img_section.addEventListener('mouseleave', () => {
+  img_head.style.transform = `
+    rotateX(0deg)
+    rotateY(0deg)`
+  });
   // Projects injection
   const projects=[
     {title:'Weather Web Application',
@@ -58,7 +139,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   projects.forEach(p=>{
     const c=document.createElement('div');
     c.className='project-card reveal';
-    c.innerHTML=`<img src="${p.img}" alt="${p.title}"/><h3>${p.title}</h3><p>${p.desc}</p><a href="${p.url}" class="view-btn" target="_blank">View Project</a>`;
+    c.innerHTML=`<img class="project_img" src="${p.img}" alt="${p.title}"/><h3>${p.title}</h3><p>${p.desc}</p><a href="${p.url}" class="view-btn" target="_blank">View Project</a>`;
     grid.appendChild(c);
   });
 

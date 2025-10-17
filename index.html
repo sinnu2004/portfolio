@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body class="theme-dark">
   <header class="header">
@@ -18,7 +17,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-icons">
-      <button id="themeToggle">🌙</button>
+      <button id="themeToggle"></button>
       <button id="menuToggle" class="hamburger">☰</button>
     </div>
   </header>
@@ -26,23 +25,34 @@
   <main>
     <section class="hero" id="hero">
       <div class="hero-content">
+        <div class="bg-img"></div>
+        <div class="overlay"></div>
         <h1 class="reveal">Hi, I'm <span class="accent">Saurabh Prajapat</span></h1>
         <p class="reveal">A passionate web developer crafting smooth digital experiences.</p>
         <a href="#projects" class="btn reveal">My Work</a>
         <a href="cv/prajapatcv.pdf" class="btn reveal">My CV</a>
       </div>
       <div class="hero-img orbit">
-        <img class="my_img" src="images/image.png" alt="Profile">
+        <img class="my_img" src="images/Gemini_Generated_Image_huea32huea32huea_2-removebg-preview.png" alt="Profile">
       </div>
     </section>
 
     <section id="about" class="reveal">
-      <h2>About Me</h2>
-      <p>I am Saurabh Prajapat, a B.Tech student specializing in Computer Science and Engineering (DATA SCIENCE). I have a strong interest in software development, problem-solving, and emerging technologies. I am currently building my skills in programming, data structures, and full-stack development, and I am eager to apply my knowledge in real-world projects and internships to grow as a technology professional.</p>
+      <!-- <div class="tree-bg"></div> -->
+      <!-- <div class="overlay"></div> -->
+      <div class="about_img_container">
+        <div class="head-mask"></div>
+        <img id="img_body" class="about_img" src="images/about_img.png" alt="img">
+        <img id="img_head" class="about_img_head" src="images/about_img_head.png">
+      </div>
+      <div class="about_content">
+        <h2 class="scroll-text" id="scrollText">About</h2>
+        <p><b>I am Saurabh Prajapat, a B.Tech student specializing in Computer Science and Engineering (DATA SCIENCE). I have a strong interest in software development, problem-solving, and emerging technologies. I am currently building my skills in programming, data structures, and full-stack development, and I am eager to apply my knowledge in real-world projects and internships to grow as a technology professional.</b></p>
+      </div>
     </section>
-
+    
     <section id="education" class="reveal">
-      <h2>Education</h2>
+      <h2 class="edu-text" id="educationText">Education</h2>
       <div class="education_container">
         <div class="education_card">
           <h4>UNDERGRADUATE</h4><br>
@@ -67,39 +77,47 @@
     </section>
 
     <section id="skills" class="reveal">
-      <h2>My Skills</h2>
-      <div class="skills-grid">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">C++</div>
-        <div class="card">Golang</div>
-        <div class="card">DSA</div>
-        <div class="card">MySql</div>
-        <div class="card">Power BI</div>
+      <!-- <div class="skill-bg"></div> -->
+      <h2 class="skill-text" id="skillText">Skills</h2>
+      <div class="skill_content">
+        <div class="skills-grid">
+          <div class="card">HTML</div>
+          <div class="card">CSS</div>
+          <div class="card">JavaScript</div>
+          <div class="card">C++</div>
+          <div class="card">Golang</div>
+          <div class="card">DSA</div>
+          <div class="card">MySql</div>
+          <div class="card">Power BI</div>
+        </div>
+        <div class="skill_img_container">
+          <img class="skill_img" src="images/skill_img.png">
+        </div>
       </div>
     </section>
 
     <section id="projects" class="reveal">
-      <h2>My Projects</h2>
+      <h2 class="project-text" id="projectText">Projects</h2>
       <div id="projectsGrid" class="projects-grid"></div>
     </section>
 
     <section id="contact" class="reveal">
-      <h2>Contact Me</h2>
+      <h2 class="contact-text" id="contactText">Let's Talk</h2>
       <ul class="contact-links">
         <li><a href="https://github.com/sinnu2004" target="_blank"><img class="link_img" src="images/GitHub_Computer_Icons_Directory_PNG-removebg-preview.png" alt="github_icon"></a><br>github</li>
         <li><a href="https://instagram.com" target="_blank"><img id="insta" class="link_img" src="images/Logo_Instagram_Social_Media_PNG-removebg-preview (1).png" alt="instagram_icon"></a><br>Instagram</li>
         <li><a href="https://www.linkedin.com/in/saurabh-prajapat-863807294/" target="_blank"><img class="link_img" src="images/linkedin.png" alt="linkedIn_icon"></a><br>LinkedIn</li>
+        <li><a href="https://leetcode.com/u/prajapatsaurabh190/"><img id="insta" class="link_img" src="images/leetcode_logo-removebg-preview.png"></a><br>Leetcode</li>
         <li><a href="mailto:prajapatsaurabh190@gmail.com"><img class="link_img" src="images/Descargar_Vectores__Imágenes__Fotos_y_Videos_Gratis-removebg-preview.png" alt="gmail_icon"></a><br>G-Mail</li>
         <li><a href="tel:9926612864"><img class="link_img" src="images/download__8_-removebg-preview (1).png" alt="contact_icon"></a><br>Contact</li>
         <li><a href="https://youtube.com" target="_blank"><img class="link_img" src="images/YouTube_Logo_PNG-removebg-preview (1).png" alt="youtube_icon"></a><br>Youtube</li>
       </ul>
-    </section><hr>
+    </section><hr class="line">
   </main>
 
   <footer class="footer">
     <p>© 2025 Saurabh Prajapat. All Rights Reserved.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
