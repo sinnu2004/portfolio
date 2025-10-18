@@ -120,18 +120,18 @@ document.addEventListener('DOMContentLoaded',()=>{
   // Projects injection
   const projects=[
     {title:'Weather Web Application',
-      desc:'FRONTEND APPLICATION',
-      img:'images/WhatsApp Image 2025-09-26 at 23.40.08_3b9180f9.jpg',
+      desc:'FRONTEND APPLICATION with APIs',
+      img:'images/weather_app.png',
       url:'https://sinnu2004.github.io/Weather/'
     },
-    {title:'To Do List',
-      desc:'Responsive storefront design',
-      img:'images/WhatsApp Image 2025-09-26 at 23.40.08_3b9180f9.jpg',
+    {title:'Library Management System',
+      desc:'Responsive Web Application',
+      img:'images/library_management.png',
       url:'https://example.com/project2'
     },
     {title:'Myntra Clone',
       desc:'HTML CSS BASED',
-      img:'images/WhatsApp Image 2025-09-26 at 23.40.08_3b9180f9.jpg',
+      img:'images/Myntra_clone.png',
       url:'https://sinnu2004.github.io/Myntra-s-clone/'
     }
   ];
@@ -162,4 +162,38 @@ document.addEventListener('DOMContentLoaded',()=>{
     const y=window.scrollY;
     orbit.style.transform=`translateY(${y*0.1}px)`;
   });
+
+  document.addEventListener("scroll", () => {
+  const logo = document.getElementById("parallaxLogo");
+  const hero = document.getElementById("hero");
+  const footer = document.querySelector("footer");
+  const logoEnd = document.getElementById("logoend");
+
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const heroBottom = hero.offsetTop + hero.offsetHeight;
+  const footerTop = footer.offsetTop;
+  const logoEndTop = logoEnd.offsetTop;
+
+  // Start and end scroll zones
+  const startScroll = heroBottom - windowHeight / 3;
+  const endScroll = logoEndTop + windowHeight + 100;
+
+  if (scrollTop > startScroll && scrollTop < endScroll) {
+    logo.style.opacity = 1;
+
+    // Calculate smooth scroll progress (0 to 1)
+    const progress = (scrollTop - startScroll) / (endScroll - startScroll);
+
+    // Logo moves downward and rotates as you scroll
+    const rotate = progress * 720; // two full rotations
+    const moveY = progress * windowHeight * 1.5; // downward distance
+
+    logo.style.transform = `translate(-50%, calc(-50% + ${moveY}px)) rotate(${rotate}deg)`;
+  } 
+  else {
+    logo.style.opacity = 0;
+  }
+});
+
 });
