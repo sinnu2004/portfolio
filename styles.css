@@ -1115,34 +1115,159 @@ h2{
 }
 
 /* ---------- Smallest devices (380px and below) ---------- */
-@media (max-width: 380px) {
-  .header {
-    padding: 0.5rem 1rem;
+/* ---------- Phones (480px and below) ---------- */
+@media (max-width: 360px) {
+  body {
+    width: 120%;
+  }
+  header, main , footer {
+    width: 100%;
   }
 
   .hero h1 {
-    font-size: 1.4rem;
+    margin-top: 100px;
+    font-size: 1.6rem;
   }
 
   .hero p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .orbit {
+    margin-bottom: 65px;
   }
 
   .hero-img img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  #about {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .about_img_container {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about_img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .about_img_head {
+    left: 45px;
+    top: 110px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .about_content {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  .edu-text {
+    margin-bottom: 40px;
+  }
+
+  .education_container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .education_card {
+    font-size: small;
+  }
+
+  .skill_content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
   }
 
   .skills-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    font-size: small;
+  }
+
+  .card {
+    width: 120px;
+  }
+
+  .skill_img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill_img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #project {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3,1fr);
+    gap: 0;
+    object-fit: cover;
+    width: 100%;
+    font-size: small;
+  }
+
+  .view-btn {
+    font-size: x-small;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project_img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: auto;
   }
 
   .contact-links {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  #contact h2 {
+    margin-bottom: 50px;
+  }
+  #logoend {
+    left: 35%;
   }
 
-  section {
-    padding: 3rem 4%;
+  footer {
+    padding: 1rem 0.5rem;
   }
 }
 
