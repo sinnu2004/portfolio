@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   // Projects injection
   const projects=[
     {title:'Weather Web Application',
-      desc:'FRONTEND APPLICATION with APIs',
+      desc:'FRONTEND APPLICATION',
       img:'images/weather_app.png',
       url:'https://sinnu2004.github.io/Weather/'
     },
@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded',()=>{
       img:'images/library_management.png',
       url:'https://example.com/project2'
     },
-    {title:'Myntra Clone',
-      desc:'HTML CSS BASED',
+    {title:`Myntra Clone's`,
+      desc:'HTML CSS BASED Frontend web',
       img:'images/Myntra_clone.png',
       url:'https://sinnu2004.github.io/Myntra-s-clone/'
     }
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   projects.forEach(p=>{
     const c=document.createElement('div');
     c.className='project-card reveal';
-    c.innerHTML=`<img class="project_img" src="${p.img}" alt="${p.title}"/><h3>${p.title}</h3><p>${p.desc}</p><a href="${p.url}" class="view-btn" target="_blank">View Project</a>`;
+    c.innerHTML=`<div class="project-container"><div><img class="project_img" src="${p.img}" alt="${p.title}"></div><div><h3 class="project-h3">${p.title}</h3><p class="project-desc">${p.desc}</p><a href="${p.url}" class="view-btn" target="_blank">View Project</a></div></div>`;
     grid.appendChild(c);
   });
 
