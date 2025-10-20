@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   // Start and end scroll zones
   const startScroll = heroBottom - windowHeight / 3;
-  const endScroll = logoEndTop + windowHeight + 100;
+  const endScroll = logoEndTop + windowHeight;
 
   if (scrollTop > startScroll && scrollTop < endScroll) {
     logo.style.opacity = 1;
