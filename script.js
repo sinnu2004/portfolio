@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     {title:'Library Management System',
       desc:'Responsive Web Application',
       img:'images/library_management.png',
-      url:'https://example.com/project2'
+      url:`https://sinnu2004.github.io/Library_Management_System/`
     },
     {title:`Myntra Clone's`,
       desc:'HTML CSS BASED Frontend web',
