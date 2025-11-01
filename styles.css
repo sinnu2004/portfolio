@@ -891,6 +891,9 @@ h2{
 
 /* ---------- Small tablets & large phones (768px and below) ---------- */
 @media (max-width: 768px) {
+  #logo {
+    margin-left: 43%;
+  }
   .header {
     padding: 0.7rem 1.2rem;
   }
@@ -919,6 +922,7 @@ h2{
 
   .hero h1 {
     font-size: 2rem;
+    margin-top: 2%;
   }
 
   .hero p {
@@ -931,21 +935,44 @@ h2{
   }
 
   #about {
-    grid-template-columns: 1fr;
+    display: flex;
   }
 
   .about_img_container {
     width: 200px;
     height: 340px;
+    margin-top: 10%;
+  }
+
+  .about_img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .about_img_head {
+    left: 60px;
+    top: 15px;
+    height: 90px;
+    width: 80px;
+  }
+
+  .about_content {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
   }
 
   .education_container {
     grid-template-columns: 1fr;
   }
 
+  .skill_content {
+    display: flex;
+  }
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.2rem;
+    font-size: small;
   }
 
   .projects-grid {
@@ -1105,7 +1132,7 @@ h2{
     margin-bottom: 50px;
   }
   #logoend {
-    left: 35%;
+    left: 38%;
   }
 
   footer {
@@ -1261,7 +1288,7 @@ h2{
     margin-bottom: 50px;
   }
   #logoend {
-    left: 35%;
+    left: 38%;
   }
 
   footer {

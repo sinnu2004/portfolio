@@ -129,10 +129,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       img:'images/library_management.png',
       url:`https://sinnu2004.github.io/Library_Management_System/`
     },
-    {title:`Myntra Clone's`,
-      desc:'HTML CSS BASED Frontend web',
-      img:'images/Myntra_clone.png',
-      url:'https://sinnu2004.github.io/Myntra-s-clone/'
+    {title:`Personal Portfolio`,
+      desc:'Testinomial Project- Portfolio',
+      img:'images/Screenshot 2025-10-30 165341.png',
+      url:'https://sinnu2004.github.io/paras/'
     }
   ];
   const grid=document.getElementById('projectsGrid');
