@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     {title:'Library Management System',
       desc:'Responsive Web Application',
       img:'images/lms.png',
-      url:`https://sinnu2004.github.io/Library_Management_System/`
+      url:`https://sinnu2004.github.io/Library-management-system/`
     },
     {title:`Personal Portfolio`,
       desc:'Testinomial Project- Portfolio',
