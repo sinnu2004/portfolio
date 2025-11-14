@@ -156,6 +156,59 @@ document.addEventListener('DOMContentLoaded',()=>{
   },{threshold:.1});
   reveals.forEach(r=>obs.observe(r));
 
+  var ctx = document.getElementById("mychart").getContext("2d");
+  var mychart = new Chart(ctx, {
+    type: "radar",
+    data: {
+      labels: ["HTML", "CSS", "Javascript","C++", "Golang","DSA","mySQL", "PowerBi"],
+      datasets: [
+        {
+          data: [7,6,8,9,6,8,7,6],
+          label: "Programming Knowledge Meter",
+          fill: true,
+          backgroundColor: "rgba(78,205,196,0.35",
+          borderColor: "#4ecdc4",
+          pointBackgroundColor: "#4ecdc4",
+          pointRadius: 4,
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      responsive: false,
+      scales: {
+        r: {
+          beginAtZero: true,
+          max: 10,
+          ticks: {
+            display: true,
+            backdropColor: "rgba(0,0,0,0)",
+          },
+          angleLines: {
+            color: "rgba(255,255,255,0.1",
+          },
+          grid: {
+            color: "rgba(255,255,255,0.1",
+          },
+          pointLabels: {
+            font: {
+              size: 15,
+              weight: "bold"
+            },
+            color: "#ddd",
+          },
+        },
+      },
+      plugins: {
+        legend:{
+          lables:{
+            color: "#4ecdc4",
+          }
+        }
+      }
+    }
+  });
+
   // Parallax effect
   const orbit=document.querySelector('.orbit img');
   window.addEventListener('scroll',()=>{
@@ -195,5 +248,4 @@ document.addEventListener('DOMContentLoaded',()=>{
     logo.style.opacity = 0;
   }
 });
-
 });

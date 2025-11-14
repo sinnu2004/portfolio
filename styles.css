@@ -678,6 +678,13 @@ h2{
   color:black;
 }
 
+.chart {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 50px;
+}
+
 /* contact section */ 
 
 .contact-text {
@@ -1165,7 +1172,6 @@ h2{
     align-items: center;
     gap: 15px;
   }
-
   .about_img_container {
     margin-top: 90px;
     display: flex;
