@@ -160,10 +160,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   var mychart = new Chart(ctx, {
     type: "radar",
     data: {
-      labels: ["HTML", "CSS", "Javascript","C++", "Golang","DSA","mySQL", "PowerBi"],
+      labels: ["HTML", "CSS", "Javascript","React","C++", "Golang","DSA","mySQL", "PowerBi"],
       datasets: [
         {
-          data: [7,6,8,9,6,8,7,6],
+          data: [7,6,8,7,9,6,8,7,6],
           label: "Programming Knowledge Meter",
           fill: true,
           backgroundColor: "rgba(78,205,196,0.35",
